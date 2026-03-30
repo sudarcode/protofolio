@@ -2,16 +2,16 @@ import { createSignal, Component } from "solid-js";
 
 export const Location: Component = () => {
   const [time, setTime] = createSignal(
-    new Date().toLocaleTimeString("en-US", {
-      timeZone: "America/New_York",
+    new Date().toLocaleTimeString("id-ID", {
+      timeZone: "Indonesia/Jakarta",
     })
   );
 
   setInterval(
     () =>
       setTime(
-        new Date().toLocaleTimeString("en-US", {
-          timeZone: "America/New_York",
+        new Date().toLocaleTimeString("id-ID", {
+          timeZone: "Indonesia/Jakarta",
         })
       ),
     1000
@@ -19,7 +19,7 @@ export const Location: Component = () => {
 
   return (
     <div>
-      <p class="text-sm text-accent-400 font-mono">{time} New York, US</p>
+      <p class="text-sm text-accent-400 font-mono">{time} Jakarta, Indonesia</p>
     </div>
   );
 };
